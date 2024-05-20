@@ -1,11 +1,12 @@
+QUIT = 0
 VIEW_ALL = 1
 VIEW_SPECIFIC= 2
 ADD_CONTACT = 3
 DELETE_CONTACT = 4
 DELETE_ALL = 5
-QUIT = 0
+
 choice = 1
-while (choice != 0):
+while (choice != QUIT):
     #menu to let user chose what they want
     print("\n\n\tMenu:")
     print("Press 1 to view all the contacts")
