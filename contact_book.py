@@ -5,6 +5,14 @@ ADD_CONTACT = 3
 DELETE_CONTACT = 4
 DELETE_ALL = 5
 
+#tests to make sure the file exists, if it doesn't create an empty file
+try:
+    csv_file = open("contacts.csv", 'r')
+    csv_file.close()
+except:
+    csv_file = open("contacts.csv", 'w')
+    csv_file.close()
+
 choice = 1
 while (choice != QUIT):
     #menu to let user chose what they want
