@@ -13,6 +13,8 @@ except:
     csv_file = open("contacts.csv", 'w')
     csv_file.close()
 
+############################################################################################################
+
 choice = 1
 while (choice != QUIT):
     #menu to let user chose what they want
@@ -35,6 +37,8 @@ while (choice != QUIT):
         print("Press 0 to quit")
         choice = int(input("Your decision: "))
 
+############################################################################################################
+
     #if user viewed all contacts
     if (choice == VIEW_ALL):
         csv_file = open("contacts.csv", 'r')
@@ -42,6 +46,8 @@ while (choice != QUIT):
         for information in csv_file:
             print(information)
         csv_file.close()
+
+############################################################################################################
 
     #if user wanted to view a specific person
     elif (choice == VIEW_SPECIFIC):
@@ -63,6 +69,8 @@ while (choice != QUIT):
 
         csv_file.close()
 
+##########################################################################################################
+
     #if user wanted to add a new contact
     elif (choice == ADD_CONTACT):
         print("\n\n\tAdding A New Contact")
@@ -74,6 +82,7 @@ while (choice != QUIT):
         csv_file.write(name + ', ' + email_address + ', ' + phone_number + ', ' + notes + "\n")
         csv_file.close()
     
+##########################################################################################################
 
     #if the user wanted to delete a contact
     elif(choice == DELETE_CONTACT):
@@ -98,6 +107,8 @@ while (choice != QUIT):
             print("The name was not in the contacts")
 
         csv_file.close()
+
+##########################################################################################################
 
     #if the user wanted to delete everyone
     elif (choice == DELETE_ALL):
